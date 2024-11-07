@@ -1,0 +1,15 @@
+clear all
+
+cd F:\FL2024\sports\sports
+
+import delimited data.csv
+
+destring salary, replace
+
+generate sqrt_def_rating = sqrt(def_rating)
+
+generate two_def_rating = def_rating * def_rating
+
+generate log_two_def_rating = log(two_def_rating)
+
+reg salary pts fg_pct reb def_rating stl blk
